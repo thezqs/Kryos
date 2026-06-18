@@ -33,7 +33,7 @@ Se considera uso comercial y queda **estrictamente prohibido** cualquier escenar
 Si decides bifurcar (fork), modificar o utilizar el motor y código de este proyecto para crear tu propio juego de ritmo, debes incluir de forma visible la siguiente atribución:
 
 1. **En la pantalla de créditos dentro del juego:** Un texto legible que diga: 
-   > *"Basado en Kryos, creado por TheZQS (https://github.com/thezqs/Kryos)"*.
+   > *Basado en Kryos, creado por TheZQS (https://github.com/thezqs/Kryos)*.
 2. **En el repositorio público (README):** Una mención en la primera sección del archivo reconociendo la autoría original y enlazando a este repositorio.
 
 **Lea LICENSE para mas informacion**
