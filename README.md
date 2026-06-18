@@ -37,3 +37,6 @@ Si decides bifurcar (fork), modificar o utilizar el motor y código de este proy
 2. **En el repositorio público (README):** Una mención en la primera sección del archivo reconociendo la autoría original y enlazando a este repositorio.
 
 **Lea LICENSE para mas informacion**
+
+
+> Este juego se ha creado usando Osu!Framework
