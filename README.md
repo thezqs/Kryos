@@ -2,9 +2,23 @@
 
 Bienvenido al repositorio oficial de **Kryos**.
 
-**Kryos** es un juego de ritmo de codigo abierto para PC (Windows y Linux). 
+**Kryos** es un juego de ritmo de codigo abierto para PC (Windows y Linux) Desarrollado en C#.
 
-**⚖️ Licencia**: Todo el código fuente, así como los recursos artísticos y componentes del juego, están protegidos bajo la licencia *CC BY-NC-SA 4.0 (Atribución-NoComercial-CompartirIgual)*. **Queda prohibido su uso para fines comerciales**. 
+[Aun el juego sigue en desarrollo, Sea paciente porfavor]
+
+**Idea**:
+Un juego **100% Dinamico** donde los creadores de mapas tengan total libertad creativa.
+
+**Metas**:
+* Agregar logica del juego.
+* Agregar menu principal.
+
+**Logrado**:
+* Iniciar el proyecto.
+
+**⚖️ Legal**: 
+Todo el código fuente, así como los recursos artísticos y componentes del juego, están protegidos bajo la licencia *CC BY-NC-SA 4.0 (Atribución-NoComercial-CompartirIgual)*. 
+**Queda prohibido su uso para fines comerciales**. 
 
 **Usted es libre de**:
 * **Compartir**: Copiar y redistribuir el material en cualquier medio o formato.
@@ -37,6 +51,5 @@ Si decides bifurcar (fork), modificar o utilizar el motor y código de este proy
 2. **En el repositorio público (README):** Una mención en la primera sección del archivo reconociendo la autoría original y enlazando a este repositorio.
 
 **Lea LICENSE para mas informacion**
-
 
 > Este juego se ha creado usando Osu!Framework (https://github.com/ppy/osu-framework)
