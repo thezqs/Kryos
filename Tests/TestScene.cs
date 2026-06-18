@@ -4,14 +4,14 @@ using Core.UserInterface;
 
 namespace Tests;
 
-public partial class TestSceneMiComponente : TestScene
+public partial class MainMenu : TestScene
 {
-    public TestSceneMiComponente()
+    public MainMenu()
     {
     }
     
     [BackgroundDependencyLoader]
-    private void load()
+    private void Load()
     {
         Child = new Main();
     }
