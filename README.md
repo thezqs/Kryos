@@ -4,7 +4,7 @@ Bienvenido al repositorio oficial de **Kryos**.
 
 **Kryos** es un juego de ritmo de codigo abierto para PC (Windows y Linux) Desarrollado en C#.
 
-[Aun el juego sigue en desarrollo, Sea paciente porfavor]
+**Aun el juego sigue en desarrollo, Sea paciente porfavor**
 
 **Idea**:
 Un juego **100% Dinamico** donde los creadores de mapas tengan total libertad creativa.
