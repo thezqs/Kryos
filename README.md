@@ -39,4 +39,4 @@ Si decides bifurcar (fork), modificar o utilizar el motor y código de este proy
 **Lea LICENSE para mas informacion**
 
 
-> Este juego se ha creado usando Osu!Framework
+> Este juego se ha creado usando Osu!Framework (https://github.com/ppy/osu-framework)
