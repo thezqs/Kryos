@@ -3,6 +3,6 @@
   <Project Path="Data/Data.csproj" />
   <Project Path="Desktop/Desktop.csproj" />
   <Project Path="Resources/Resources.csproj" />
-  <Project Path="Test/Test.csproj" />
+  <Project Path="Test/Tests.csproj" />
   <Project Path="Tools/Tools.csproj" />
 </Solution>
