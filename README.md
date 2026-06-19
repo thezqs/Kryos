@@ -10,11 +10,10 @@ Bienvenido al repositorio oficial de **Kryos**.
 Un juego **100% Dinamico** donde los creadores de mapas tengan total libertad creativa.
 
 **Metas**:
-* Agregar logica del juego.
-* Agregar menu principal.
+1. Agregar logica del juego.
+2. Agregar menu principal.
 
-**Logrado**:
-* Iniciar el proyecto.
+**Logrado**: (Aun nada D:)
 
 **⚖️ Legal**: 
 Todo el código fuente, así como los recursos artísticos y componentes del juego, están protegidos bajo la licencia *CC BY-NC-SA 4.0 (Atribución-NoComercial-CompartirIgual)*. 
