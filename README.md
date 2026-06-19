@@ -41,8 +41,6 @@ Se considera uso comercial y queda **estrictamente prohibido** cualquier escenar
 * Bloquear contenido, canciones o funciones detrás de un sistema de pago o micropagos.
 * Monetizar videos de gameplay en plataformas como YouTube o Twitch si el software derivado se utiliza como la principal fuente de ingresos del canal sin autorización previa.
 
-*Nota: La recepción de donaciones voluntarias (sin contraprestación de ventajas en el juego) a través de plataformas como Ko-fi o Patreon queda permitida únicamente para el proyecto original.*
-
 **2. Formato Obligatorio de Créditos (Atribución)**:
 Si decides bifurcar (fork), modificar o utilizar el motor y código de este proyecto para crear tu propio juego de ritmo, debes incluir de forma visible la siguiente atribución:
 
