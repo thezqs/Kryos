@@ -13,7 +13,7 @@ Un juego **100% Dinamico** donde los creadores de mapas tengan total libertad cr
 1. Agregar logica del juego.
 2. Agregar menu principal.
 
-**Logrado**: (Aun nada D:)
+**Logrado**: Aun nada D:
 
 **⚖️ Legal**: 
 Todo el código fuente, así como los recursos artísticos y componentes del juego, están protegidos bajo la licencia *CC BY-NC-SA 4.0 (Atribución-NoComercial-CompartirIgual)*. 
