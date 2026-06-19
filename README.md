@@ -39,7 +39,7 @@ Se considera uso comercial y queda **estrictamente prohibido** cualquier escenar
 * Vender el juego o versiones modificadas en plataformas como Steam, Itch.io, Google Play, etc.
 * Incluir publicidad dentro del juego (banners, videos recompensados).
 * Bloquear contenido, canciones o funciones detrás de un sistema de pago o micropagos.
-* Monetizar videos de gameplay en plataformas como YouTube o Twitch si el software derivado se utiliza como la principal fuente de ingresos del canal sin autorización previa.
+* Se puede Monetizar videos de gameplay en plataformas como YouTube o Twitch.
 
 **2. Formato Obligatorio de Créditos (Atribución)**:
 Si decides bifurcar (fork), modificar o utilizar el motor y código de este proyecto para crear tu propio juego de ritmo, debes incluir de forma visible la siguiente atribución:
