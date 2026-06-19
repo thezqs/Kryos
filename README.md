@@ -31,7 +31,7 @@ Todo el código fuente, así como los recursos artísticos y componentes del jue
 
 **⚖️ Aclaraciones sobre la Licencia (CC BY-NC-SA 4.0)**
 
-Para evitar dudas o vacíos legales en este proyecto, el autor define los términos "No Comercial" y "Atribución" de la siguiente manera:
+Para evitar dudas o vacíos legales en este proyecto, defino los términos "No Comercial" y "Atribución" de la siguiente manera:
 
 1. **Definición de Uso Comercial (Directo o Indirecto)**:
 Se considera uso comercial y queda **estrictamente prohibido** cualquier escenario donde se genere dinero con este código o sus derivados, incluyendo de forma enunciativa pero no limitativa:
@@ -42,10 +42,10 @@ Se considera uso comercial y queda **estrictamente prohibido** cualquier escenar
 **Se puede monetizar videos de gameplay en plataformas como YouTube o Twitch sin restricciones.**
 
 **2. Formato Obligatorio de Créditos (Atribución)**:
-Si decides bifurcar (fork), modificar o utilizar el motor y código de este proyecto para crear tu propio juego de ritmo, debes incluir de forma visible la siguiente atribución:
+Si decides bifurcar (fork), modificar o utilizar el motor y código de este proyecto, debes incluir de forma visible la siguiente atribución:
 
 1. **En la pantalla de créditos dentro del juego:** Un texto legible que diga: 
-   > *Basado en componentes de Kryos, creado por TheZQS (https://github.com/thezqs/Kryos)*.
+   > *Basado en componentes de Kryos (https://github.com/thezqs/Kryos)*.
 2. **En el repositorio público (README):** Una mención en la primera sección del archivo reconociendo la autoría original y enlazando a este repositorio.
 
 **Lea LICENSE para mas informacion**
