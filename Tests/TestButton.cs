@@ -22,6 +22,7 @@ public partial class KryosButtonTest : TestScene
                 {
                     Origin = Anchor.TopLeft,
                     Anchor = Anchor.TopLeft,
+                    ToggleMode = true
                 },
             },
         };

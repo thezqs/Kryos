@@ -2,13 +2,13 @@ namespace Core.UserInterface.Components.Buttons;
 
 public partial class TextButton : BaseButton
 {
-    private readonly SpriteText textComponent;
+    public readonly SpriteText TextComponent;
 
     public TextButton(string text, Action ClicAction)
     {
         Masking = true;
         CornerRadius = 20;
-        AddInternal(textComponent = new SpriteText
+        AddInternal(TextComponent = new SpriteText
         {
             Anchor = Anchor.Centre,
             Origin = Anchor.Centre,
@@ -18,7 +18,7 @@ public partial class TextButton : BaseButton
         }
         );
 
-        textComponent.Text = text;
+        TextComponent.Text = text;
         Action = ClicAction;
 
         Size = new Vector2(150, 40);

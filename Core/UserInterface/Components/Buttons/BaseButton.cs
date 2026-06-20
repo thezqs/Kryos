@@ -2,6 +2,9 @@ namespace Core.UserInterface.Components.Buttons;
 
 public abstract partial class BaseButton : Button
 {
+    public bool ToggleMode { get; set; } = false;
+    public readonly BindableBool Pressed = new();
+
     private readonly Box backgroundComponent;
 
     private Color4 colorAfterClick = Color4.White;
@@ -21,6 +24,7 @@ public abstract partial class BaseButton : Button
         {
             RelativeSizeAxes = Axes.Both,
         });
+
     }
 
     protected override bool OnHover(HoverEvent e)
@@ -33,7 +37,8 @@ public abstract partial class BaseButton : Button
 
     protected override void OnHoverLost(HoverLostEvent e)
     {
-        this.FadeColour(Color4.White, 100);
+        Color4 toColor = Pressed.Value ? Color4.DarkGray : Color4.White;
+        this.FadeColour(toColor, 100);
         colorAfterClick = Color4.White;
 
         base.OnHoverLost(e);
@@ -42,12 +47,20 @@ public abstract partial class BaseButton : Button
     protected override bool OnMouseDown(MouseDownEvent e)
     {
         this.FadeColour(Color4.Gray, 50);
-        return base.OnMouseDown(e);
+        return true;
     }
 
     protected override void OnMouseUp(MouseUpEvent e)
     {
-        this.FadeColour(colorAfterClick, 100);
+        // Retornamos ya que el usuario queria cancelar el click.
+        if (!IsHovered) return;
+
+        if (ToggleMode)
+        {
+            Pressed.Value = !Pressed.Value;
+            this.FadeColour(Pressed.Value ? Color4.DarkGray : colorAfterClick, 50);
+        }
+        else this.FadeColour(colorAfterClick, 50);
     }
 
 }
