@@ -15,6 +15,8 @@ global using osu.Framework.Input.Events;
 global using osu.Framework.Screens;
 global using osu.Framework.Testing;
 global using osu.Framework.Bindables;
+global using osu.Framework;
+global using osu.Framework.Platform;
 
 global using osuTK;
 global using osuTK.Graphics;
