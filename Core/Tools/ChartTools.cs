@@ -59,9 +59,13 @@ public static partial class ChartTools
         }
 
         // Seccion InstantiateEvents.
+        InstantiateEvent[] instantiateEvents = [];
+        if (root.TryGetProperty("instantiate", out JsonElement eventsArray) && eventsArray.ValueKind == JsonValueKind.Array)
+        {
+            instantiateEvents = parseInstantiateEvents(eventsArray);
+        }
 
-
-        return new ChartGameplay(bpmPoints, );
+        return new ChartGameplay(bpmPoints, instantiateEvents);
     }
 
     private static BpmPoint[] parseBpm(JsonElement bpmArray)
@@ -95,9 +99,19 @@ public static partial class ChartTools
         return bpmPoints;
     }
 
-    private static InstantiateEvent[] parseInstantiateEvents(JsonElement events)
+    private static InstantiateEvent[] parseInstantiateEvents(JsonElement instantiateArray)
     {
-        return [];
+        List<InstantiateEvent> flatTimeline = [];
+
+        if (instantiateArray.ValueKind == JsonValueKind.Array)
+        {
+            foreach (JsonElement element in instantiateArray.EnumerateArray())
+            {
+                parseEventRecusive(element, flatTimeline);
+            }
+        }
+
+        return [.. flatTimeline];
     }
 
     private static void parseEventRecusive(JsonElement element, List<InstantiateEvent> flatTimeline, NodeData? currentParent = null)
@@ -116,7 +130,7 @@ public static partial class ChartTools
             }
         }
     }
-    
+
     public static InstantiateEvent? ParseEvent(JsonElement element, NodeData? parent = null)
     {
         string? type = null;
