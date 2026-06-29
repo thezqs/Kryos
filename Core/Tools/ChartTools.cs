@@ -95,11 +95,28 @@ public static partial class ChartTools
         return bpmPoints;
     }
 
-    private static InstantiateEvent[]? parseInstantiateEvents(JsonElement events)
+    private static InstantiateEvent[] parseInstantiateEvents(JsonElement events)
     {
-        return null;
+        return [];
     }
 
+    private static void parseEventRecusive(JsonElement element, List<InstantiateEvent> flatTimeline, NodeData? currentParent = null)
+    {
+        InstantiateEvent? evt = ParseEvent(element, currentParent);
+
+        if (evt == null) return;
+
+        flatTimeline.Add(evt.Value);
+
+        if (element.TryGetProperty("childs", out JsonElement childsArray) && childsArray.ValueKind == JsonValueKind.Array)
+        {
+            foreach (JsonElement child in childsArray.EnumerateArray())
+            {
+                parseEventRecusive(child, flatTimeline, evt.Value.NodeToAdd);
+            }
+        }
+    }
+    
     public static InstantiateEvent? ParseEvent(JsonElement element, NodeData? parent = null)
     {
         string? type = null;
