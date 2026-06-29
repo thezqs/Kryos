@@ -1,6 +1,6 @@
 namespace Core.Tools;
 
-public static class Anim
+public static class AnimTools
 {
     public static float Lerp(float a, float b, float w, bool isRotation = false)
     {
@@ -27,7 +27,7 @@ public static class Anim
             a.A + (b.A - a.A) * w
         );
     }
-    
+
     public static float Ease(float s, float curve)
     {
         s = Math.Clamp(s, 0, 1);

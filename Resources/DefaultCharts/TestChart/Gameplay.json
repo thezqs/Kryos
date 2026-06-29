@@ -1,0 +1,14 @@
+{
+  "bpm": [
+    { "time" : 0.0, "bpm" : 120 } 
+  ],
+  "instantiate": [
+    {
+      "type": "CatchNote",
+      "startTime": 1.0,
+      "tapTime": 4.0,
+      "animation": {},
+      "childs": []
+    }
+  ]
+}

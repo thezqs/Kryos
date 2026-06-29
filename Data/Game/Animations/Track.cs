@@ -6,7 +6,7 @@ namespace Data.Game.Animations;
 public class AnimationTrack<T>(KeyFrame<T>[] keyFrames)
 {
     /// <summary> 
-    /// Los keyframes. NO EDITAR DIRECTAMENTE
+    /// Los keyframes.
     /// </summary>
     public KeyFrame<T>[] KeyFrames { get; init; } = keyFrames;
 
