@@ -54,7 +54,7 @@ public static partial class ChartTools
         }
         else
         {
-            Console.WriteLine($"❗ERROR: No se ha encontrado el parametro 'bpm' en el chart");
+            Console.WriteLine($"❗ERROR: No se ha encontrado el parametro 'bpm' en el chart.");
             return null;
         }
 
@@ -63,6 +63,11 @@ public static partial class ChartTools
         if (root.TryGetProperty("instantiate", out JsonElement eventsArray) && eventsArray.ValueKind == JsonValueKind.Array)
         {
             instantiateEvents = parseInstantiateEvents(eventsArray);
+        }
+        else
+        {
+            Console.WriteLine("❗ERROR: No se pudo encontrar el campo 'instantiate' en el chart.");
+            return null;
         }
 
         return new ChartGameplay(bpmPoints, instantiateEvents);
@@ -105,30 +110,34 @@ public static partial class ChartTools
 
         if (instantiateArray.ValueKind == JsonValueKind.Array)
         {
-            foreach (JsonElement element in instantiateArray.EnumerateArray())
+            var stack = new Stack<(JsonElement Element, NodeData? Parent)>();
+
+            foreach (JsonElement root in instantiateArray.EnumerateArray())
             {
-                parseEventRecusive(element, flatTimeline);
+                stack.Push((root, null));
+            }
+
+            while (stack.Count > 0)
+            {
+                var (element, parent) = stack.Pop();
+                InstantiateEvent? evt = ParseEvent(element, parent);
+                if (evt == null) continue;
+
+                flatTimeline.Add(evt.Value);
+
+                if (element.TryGetProperty("childs", out JsonElement childsArray) && childsArray.ValueKind == JsonValueKind.Array)
+                {
+                    foreach (JsonElement child in childsArray.EnumerateArray())
+                    {
+                        stack.Push((child, evt.Value.NodeToAdd));
+                    }
+                }
             }
         }
+
+        flatTimeline.Sort((a, b) => a.StartTime.CompareTo(b.StartTime));
 
         return [.. flatTimeline];
-    }
-
-    private static void parseEventRecusive(JsonElement element, List<InstantiateEvent> flatTimeline, NodeData? currentParent = null)
-    {
-        InstantiateEvent? evt = ParseEvent(element, currentParent);
-
-        if (evt == null) return;
-
-        flatTimeline.Add(evt.Value);
-
-        if (element.TryGetProperty("childs", out JsonElement childsArray) && childsArray.ValueKind == JsonValueKind.Array)
-        {
-            foreach (JsonElement child in childsArray.EnumerateArray())
-            {
-                parseEventRecusive(child, flatTimeline, evt.Value.NodeToAdd);
-            }
-        }
     }
 
     public static InstantiateEvent? ParseEvent(JsonElement element, NodeData? parent = null)
@@ -183,7 +192,7 @@ public static partial class ChartTools
         // Obtenemos el tiempo
         float time = float.NegativeInfinity;
 
-        if (element.TryGetProperty("time", out JsonElement timeElement))
+        if (element.TryGetProperty("startTime", out JsonElement timeElement))
         {
             if (timeElement.ValueKind == JsonValueKind.Number)
             {
@@ -201,7 +210,7 @@ public static partial class ChartTools
 
         try
         {
-            nodeData = JsonSerializer.Deserialize(element.GetRawText(), targetType, json_options) as NodeData;
+            nodeData = JsonSerializer.Deserialize(element, targetType, json_options) as NodeData;
         }
         catch (JsonException ex)
         {

@@ -1,7 +1,5 @@
 {
-  "bpm": [
-    { "time" : 0.0, "bpm" : 120 } 
-  ],
+  "bpm": [{ "time": 0.0, "bpm": 120 }],
   "instantiate": [
     {
       "type": "CatchNote",

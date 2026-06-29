@@ -8,7 +8,12 @@ public partial class GameplayTest : TestScene
 {
     public GameplayTest()
     {
-        Gameplay gameplay = new Gameplay();
-        Add(gameplay);
+        var file = FileTools.GetResourceFile("DefaultCharts/TestChart/Gameplay.json");
+        var gameplay = ChartTools.ReadGameplayChart(file);
+        
+        foreach (var evt in gameplay.Instantiate)
+        {
+            Console.WriteLine($"Time: {evt.StartTime}, Node: {evt.NodeToAdd}");
+        }
     }
 }
