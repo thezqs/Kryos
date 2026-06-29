@@ -2,6 +2,13 @@ namespace Core.Tools;
 
 public static class AnimTools
 {
+    public static float InverseLerp(float a, float b, float v)
+    {
+        if (a == b) return 0f;
+
+        return Math.Clamp((v - a) / (b - a), 0, 1);
+    }
+    
     public static float Lerp(float a, float b, float w, bool isRotation = false)
     {
         if (isRotation)
