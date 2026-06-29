@@ -6,7 +6,7 @@ public static class AnimTools
     {
         if (a == b) return 0f;
 
-        return Math.Clamp((v - a) / (b - a), 0, 1);
+        return Math.Clamp((v - a) / (b - a), 0f, 1f);
     }
     
     public static float Lerp(float a, float b, float w, bool isRotation = false)
