@@ -1,6 +1,6 @@
-﻿using Data.Game.Nodes;
+﻿using Core.Data.Game.Nodes;
 
-namespace Data.Game;
+namespace Core.Data.Game;
 
 public record struct BpmPoint(float Time, float Bpm);
 

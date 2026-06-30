@@ -1,4 +1,4 @@
-namespace Data.Settings;
+namespace Core.Data.Settings;
 
 public class InterfaceSettings
 {

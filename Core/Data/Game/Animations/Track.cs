@@ -1,4 +1,4 @@
-namespace Data.Game.Animations;
+namespace Core.Data.Game.Animations;
 
 /// <summary> 
 /// Contiene toda la informacion de la pista de animacion de una variable.

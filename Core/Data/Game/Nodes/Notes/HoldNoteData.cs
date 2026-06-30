@@ -1,4 +1,4 @@
-namespace Data.Game.Nodes.Notes;
+namespace Core.Data.Game.Nodes.Notes;
 
 public record HoldNoteData : NoteData
 {

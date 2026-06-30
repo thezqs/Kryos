@@ -1,6 +1,6 @@
-using Data.Game.Animations;
+using Core.Data.Game.Animations;
 
-namespace Data.Game.Nodes;
+namespace Core.Data.Game.Nodes;
 
 // <summary> La base de cualquier objeto del juego en datos </summary>
 public record NodeData

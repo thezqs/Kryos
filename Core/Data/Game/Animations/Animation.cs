@@ -1,4 +1,4 @@
-namespace Data.Game.Animations;
+namespace Core.Data.Game.Animations;
 
 /// <summary> 
 /// La clase que contiene todos lo relacionado con la animacion de un objeto.

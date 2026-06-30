@@ -1,4 +1,4 @@
-namespace Data.Game.Animations;
+namespace Core.Data.Game.Animations;
 
 /// <summary>
 /// Contiene la informacion de un momento exacto que en el juego se anima.
